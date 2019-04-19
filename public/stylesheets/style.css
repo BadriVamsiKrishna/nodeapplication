@@ -1,0 +1,33 @@
+#spdiv{
+	background-image: url("https://oiaqatar.org/wp-content/uploads/2018/02/blood-donation-qatar.jpg");
+	position:fixed;
+	text-align:center;
+	height:90%;
+	width:100%; 
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+#f1{
+	position: absolute;
+  	left: 875px;
+  	top: 120px;
+}
+#f2{
+	position: absolute;
+  	left: 1010px;
+  	top: 120px;
+}
+td,th{
+	width:100px;
+	height:30px;
+	border:2px solid black;
+}
+.btn-success{
+	width:125px;
+	height:65px;
+}
+.btn-danger{
+	width:130px;
+	height:65px;
+}

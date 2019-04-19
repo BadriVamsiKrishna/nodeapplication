@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>ONLINE BLOOD BANK</title>
+		<link rel="stylesheet" href="/stylesheets/style.css">  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">                   
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script> 
+        <script type="text/javascript" src="/javascripts/javas.js"></script> 
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.132.0.min.js"></script>
+        <style>
+			#chatplace{
+				position:absolute;
+				right:0;
+				bottom:0;
+			}
+			#overlay{
+  				display: none;
+  				/*transition-delay:250ms;*/
+  				/*background-color: rgba(0,0,0,0.5);*/
+  				z-index: 2;
+  				cursor: pointer;
+			}
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				document.getElementById
+				var oc=document.getElementById("oc");
+				var cb=document.getElementById("overlay");
+				var spd=document.getElementById("spdiv");
+				var b=document.getElementById("background");
+					oc.addEventListener("click",function(event){
+					if(oc.innerHTML=="HAVE ANY QUESTION?"){
+						cb.style.transitionDelay="250ms";
+						cb.style.display="block";
+						oc.innerHTML="CLOSE";
+						spd.style.opacity="0.1";
+					}
+					else{
+						cb.style.display="none";
+						spd.style.opacity="1";
+						oc.innerHTML="HAVE ANY QUESTION?";
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="background" style="text-align:center"><h1 id="clickpolly">BLOOD BANK SYSTEM</h1></div>
+		<div id="spdiv">
+			<form id="f1" method="GET" action="/newdonor" style="display:inline"><button class="btn btn-success" width="100px" width="100px" style="font-weight: bold">BE A DONOR</button></form> 
+			<form id="f2" method="GET" action="/finddonors" style="display:inline"><button class="btn btn-danger" width="100px" width="100px" style="font-weight: bold">NEED BLOOD?</button></form>
+		</div>	
+		<div id="chatplace">
+			<div id="overlay" style="display:none">
+				<iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/b6e0c914-d938-4b6b-8d11-8b18258a9296"> </iframe>
+			</div>
+			<button class="btn btn-info" id="ocb" style="width:350px;height:50px"><p id="oc" style="width:330px;margin-top:3px">HAVE ANY QUESTION?</p></button>
+		</div>
+		<audio>
+			<source class="track" src="" type="audio/mpeg">
+		</audio>
+	</body>	
+</html>
